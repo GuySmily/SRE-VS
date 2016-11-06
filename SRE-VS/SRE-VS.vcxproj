@@ -82,10 +82,6 @@
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="readme.txt" />
-    <!--Item Include="$([System.IO.Directory]::GetFiles(&quot;$(SolutionDir)..\SRE-2&quot;,&quot;*&quot;,SearchOption.AllDirectories))"></Item-->
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Source\avlTree.c" />
     <ClCompile Include="Source\bms.c" />
     <ClCompile Include="Source\brakePressureSensor.c" />
@@ -121,6 +117,7 @@
     <ClInclude Include="Source\wheelSpeeds.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\readme.md" />
     <None Include="Source\canManager HistoryArray.cignore" />
     <None Include="Source\handshake.c.makeignore" />
   </ItemGroup>
