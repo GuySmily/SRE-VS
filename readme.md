@@ -1,5 +1,5 @@
 ========================================================================
-    MAKEFILE PROJECT : SRE-VS Project Overview
+MAKEFILE PROJECT : SRE-VS Project Overview
 ========================================================================
 Visual Studio is the IDE personally preferred by the SRE Software Team lead.
 Intellisense makes Visual Studio a pleasure to use, offering features such
