@@ -1,29 +1,60 @@
 ========================================================================
     MAKEFILE PROJECT : SRE-VS Project Overview
 ========================================================================
+Visual Studio is the IDE personally preferred by the SRE Software Team lead.
+Intellisense makes Visual Studio a pleasure to use, offering features such
+as auto-complete, display of function parameters and object properties/methods,
+and other helpful tools.
 
-AppWizard has created this SRE-VS project for you.  
+The downside to using Visual Studio for development is that the TTTech VCUs
+were designed to use their own compiler/IDE, TASKING VX.  Visual Studio was
+not the intended IDE for use with TTTech VCUs.  TASKING VX is based on Eclipse,
+and it uses an external compiler (Viper?) that builds the binary file (main.hex)
+that is flashed to the VCU.
 
-This file contains a summary of what you will find in each of the files that
-make up your SRE-VS project.
+This project was created to allows you to build/clean/rebuild code for SRE
+from within Visual Studio.  It works by running a batch file in the SRE-2 folder,
+which sets the working directory correctly and runs the VCU's make.exe therein.
+This correctly runs the TASKING VX compiler and results in SRE code being
+built as normal.
 
+In order for this setup to work correctly, this project's folder (SRE-VS) 
+must be placed in the same location as the SRE-2 folder (Environment\dev).
 
-SRE-VS.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard. 
-    It contains information about the version of Visual C++ that generated the file, and 
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
+========================================================================
+SETUP
+========================================================================
+To set up SRE-VS on a new development machine:
+1. Get the VCU folder from the software team lead.
+2. Clone SRE-2 from GitHub into VCU\Environment\dev
+   - This will create a subfolder called SRE-2 inside of dev.
+   - You do not need to create the SRE-2 subfolder ahead of time.  Just 
+     select the dev folder.
+   - If the SRE-2 folder already exists, you should delete it first so that
+     you get the latest code from GitHub instead.
+3. Clone SRE-VS from GitHub into VCU\Environment\dev (same parent folder).
+4. Within SRE-VS\SRE-VS (subfolder with same name), run _linksource.bat
+5. Open SRE-VS\SRE-VS.sln to start coding in Visual Studio!
 
-SRE-VS.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
+The header files provided by TTControl (the TTTech VCU APIs) can be found
+under the "External Dependences" filter (folder).
 
-This project allows you to build/clean/rebuild from within Visual Studio by calling the commands you have input 
-in the wizard. The build command can be nmake or any other tool you use.
+Our code is located in the "Source" and "Header Files" filters.
 
-This project does not contain any files, so there are none displayed in Solution Explorer.
+========================================================================
+IMPORTANT: Creating new files / adding files from SRE-2 to Visual Studio
+========================================================================
+In exchange for the convenience of compiling (build / Ctrl+Shift+B) from within
+Visual Studio, it becomes slightly harder to create new source files and to
+add a new source file from SRE-2 into Visual Studio.
+
+In Visual Studio's Solution Explorer, the Source "folder" (VS2015 calls it
+a "filter") is not actually the SRE-2 code folder. This "filter" only shows 
+files which have been manually selected ("included" in the project).
+
+Click the "Show All Files" icon to see all files within the actual SRE-2 folder.
+You can right click on missing files to include them in the Visual Studio
+project.  This step is necessary in order for intellisense to work properly.
 
 /////////////////////////////////////////////////////////////////////////////
+

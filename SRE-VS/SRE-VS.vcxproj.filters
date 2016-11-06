@@ -1,18 +1,118 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Source">
+      <UniqueIdentifier>{cf6b9b90-88ab-4b77-b0ff-45e4723babae}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\avlTree.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\bms.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\brakePressureSensor.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\canManager.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\cooling.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\initializations.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\main.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\mathFunctions.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\motorController.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\readyToDriveSound.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\safety.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sensorCalculations.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\sensors.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\serial.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\torqueEncoder.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\wheelSpeeds.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\avlTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\bms.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\brakePressureSensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\canManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\cooling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\initializations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\mathFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\motorController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\readyToDriveSound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\safety.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\sensorCalculations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\sensors.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\serial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\torqueEncoder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\wheelSpeeds.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\canManager HistoryArray.cignore">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="Source\handshake.c.makeignore">
+      <Filter>Source</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />

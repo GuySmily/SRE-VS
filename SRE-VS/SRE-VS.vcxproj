@@ -62,23 +62,67 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <NMakeBuildCommandLine>..\SRE-2\make</NMakeBuildCommandLine>
-    <NMakeOutput>..\SRE-2\build\main.hex</NMakeOutput>
-    <NMakeCleanCommandLine>..\SRE-2\_clean.bat</NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>..\SRE-2\make -B</NMakeReBuildCommandLine>
+    <NMakeBuildCommandLine>$(SolutionDir)..\SRE-2\make.bat</NMakeBuildCommandLine>
+    <NMakeOutput>$(SolutionDir)..\SRE-2\build\main.hex</NMakeOutput>
+    <NMakeCleanCommandLine>$(SolutionDir)..\SRE-2\make.bat clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>$(SolutionDir)..\SRE-2\make.bat -B</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <IncludePath>$(SolutionDir)..\..\inc</IncludePath>
+    <SourcePath>$(VC_SourcePath);$(SolutionDir)..\SRE-2\</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <NMakeBuildCommandLine>..\SRE-2\make</NMakeBuildCommandLine>
-    <NMakeOutput>..\SRE-2\build\main.hex</NMakeOutput>
-    <NMakeCleanCommandLine>..\SRE-2\_clean.bat</NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>..\SRE-2\make -B</NMakeReBuildCommandLine>
+    <NMakeBuildCommandLine>$(SolutionDir)..\SRE-2\make.bat</NMakeBuildCommandLine>
+    <NMakeOutput>$(SolutionDir)..\SRE-2\build\main.hex</NMakeOutput>
+    <NMakeCleanCommandLine>$(SolutionDir)..\SRE-2\make.bat clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>$(SolutionDir)..\SRE-2\make.bat -B</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <IncludePath>$(SolutionDir)..\..\inc</IncludePath>
+    <SourcePath>$(VC_SourcePath);$(SolutionDir)..\SRE-2\</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
+    <!--Item Include="$([System.IO.Directory]::GetFiles(&quot;$(SolutionDir)..\SRE-2&quot;,&quot;*&quot;,SearchOption.AllDirectories))"></Item-->
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\avlTree.c" />
+    <ClCompile Include="Source\bms.c" />
+    <ClCompile Include="Source\brakePressureSensor.c" />
+    <ClCompile Include="Source\canManager.c" />
+    <ClCompile Include="Source\cooling.c" />
+    <ClCompile Include="Source\initializations.c" />
+    <ClCompile Include="Source\main.c" />
+    <ClCompile Include="Source\mathFunctions.c" />
+    <ClCompile Include="Source\motorController.c" />
+    <ClCompile Include="Source\readyToDriveSound.c" />
+    <ClCompile Include="Source\safety.c" />
+    <ClCompile Include="Source\sensorCalculations.c" />
+    <ClCompile Include="Source\sensors.c" />
+    <ClCompile Include="Source\serial.c" />
+    <ClCompile Include="Source\torqueEncoder.c" />
+    <ClCompile Include="Source\wheelSpeeds.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\avlTree.h" />
+    <ClInclude Include="Source\bms.h" />
+    <ClInclude Include="Source\brakePressureSensor.h" />
+    <ClInclude Include="Source\canManager.h" />
+    <ClInclude Include="Source\cooling.h" />
+    <ClInclude Include="Source\initializations.h" />
+    <ClInclude Include="Source\mathFunctions.h" />
+    <ClInclude Include="Source\motorController.h" />
+    <ClInclude Include="Source\readyToDriveSound.h" />
+    <ClInclude Include="Source\safety.h" />
+    <ClInclude Include="Source\sensorCalculations.h" />
+    <ClInclude Include="Source\sensors.h" />
+    <ClInclude Include="Source\serial.h" />
+    <ClInclude Include="Source\torqueEncoder.h" />
+    <ClInclude Include="Source\wheelSpeeds.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\canManager HistoryArray.cignore" />
+    <None Include="Source\handshake.c.makeignore" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
