@@ -1,5 +1,5 @@
 ========================================================================
-MAKEFILE PROJECT : SRE-VS Project Overview
+SRE-VS Project Overview
 ========================================================================
 Visual Studio is the IDE personally preferred by the SRE Software Team lead.
 Intellisense makes Visual Studio a pleasure to use, offering features such
@@ -7,12 +7,12 @@ as auto-complete, display of function parameters and object properties/methods,
 and other helpful tools.
 
 The downside to using Visual Studio for development is that the TTTech VCUs
-were designed to use their own compiler/IDE, TASKING VX.  Visual Studio was
-not the intended IDE for use with TTTech VCUs.  TASKING VX is based on Eclipse,
-and it uses an external compiler (Viper?) that builds the binary file (main.hex)
-that is flashed to the VCU.
+were designed to use their own compiler/IDE, TASKING VX.  TASKING VX is based 
+on Eclipse, and it uses an external compiler (Viper?) to build the binary file
+(main.hex) that is flashed to the VCU.  Visual Studio was never intended to be
+the IDE for developing software for TTTech controllers.  
 
-This project was created to allows you to build/clean/rebuild code for SRE
+This project was created to allow you to build/clean/rebuild code for SRE
 from within Visual Studio.  It works by running a batch file in the SRE-2 folder,
 which sets the working directory correctly and runs the VCU's make.exe therein.
 This correctly runs the TASKING VX compiler and results in SRE code being
