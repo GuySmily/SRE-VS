@@ -22,7 +22,7 @@ In order for this setup to work correctly, this project's folder (SRE-VS)
 must be placed in the same location as the SRE-2 folder (Environment\dev).
 
 ========================================================================
-SETUP
+Setup
 ========================================================================
 To set up SRE-VS on a new development machine:
 1. Get the VCU folder from the software team lead.
